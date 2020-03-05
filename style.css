@@ -1,0 +1,230 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+blockquote {
+    border-left: 4px solid #ed515191 !important;
+}
+
+h1 {
+    padding: 0px 20px;
+    border-left: 10px solid #ed515191;
+    background-color: rgba(208, 208, 208, 0);
+    font-size: 19px;
+    line-height: 30px;
+    color: cornflowerblue;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+h2 {
+    padding: 0px 20px;
+    border-left: 10px solid #BF51ED91;
+    background-color: rgba(208, 208, 208, 0);
+    font-size: 18px;
+    line-height: 30px;
+    color: cornflowerblue;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+h3 {
+    padding: 0px 20px;
+    border-left: 10px solid #6495ed91;
+    background-color: rgba(208, 208, 208, 0);
+    font-size: 17px;
+    line-height: 27px;
+    color: cornflowerblue;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+h4 {
+    padding: 0px 20px;
+    border-left: 10px solid #e2aa2b91;
+    background-color: rgba(208, 208, 208, 0);
+    font-size: 16px;
+    line-height: 24px;
+    color: cornflowerblue;
+    font-weight: bold;
+    margin: 5px 0;
+}
+h5 {
+    padding: 0 20px;
+    border-left: 10px solid #64c1c191;
+    background-color: rgba(208, 208, 208, 0);
+    font-size: 15px;
+    line-height: 21px;
+    color: cornflowerblue;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* for block of numbers */
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    .hljs-ln td -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: center;
+    color: #ccc;
+    border-right: 1px solid #CCC;
+    vertical-align: top;
+    padding-right: 10px!important;
+
+    /* your custom style here */
+}
+/* for block of code */
+.hljs-ln-code {
+    padding-left: 10px !important;
+}
+
+.page-navigator {
+    text-align: center;
+    padding: 5px auto;
+    display: block;
+}
+
+.page-navigator li {
+    display: inline-block;
+}
+
+.page-navigator li a:hover {
+    background-color: #b6b6b6;
+    color: #3f51b5;
+}
+
+.page-navigator li a {
+    color: #727272;
+    display: block;
+    margin: 0px 10px;
+    padding: 1em;
+    font-size: 14px;
+    border-radius: 3px;
+    overflow: hidden;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+.page-navigator .current a:hover {
+    background: #3f51b5;
+}
+
+.page-navigator .current a {
+    background: #3f51b5;
+    color: #fff;
+}
+
+.my-info {
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.my-info img {
+    margin: 10px auto;
+    max-height: 130px;
+    max-width: 130px;
+}
+
+.avatar {
+    -webkit-transition: 0.4s;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+}
+
+.avatar:hover {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+}
+
+.avatar {
+    animation-timing-function: cubic-bezier(0, 0, .07, 1) !important;
+    border: 0 solid
+}
+
+.avatar:hover {
+    transform: rotate(360deg) scale(1.2);
+    /*border-width:5px;*/
+    animation: avatar .5s
+}
+
+.comment-list {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.comment-content p {
+    display: inline-block;
+}
+
+.tags > a {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 6px 10px;
+    border-radius: 2px;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.tags > a:nth-child(7n+1) {
+    background: #8bc34a;
+}
+
+.tags > a:nth-child(7n+2) {
+    background: #673ab7;
+}
+
+.tags > a:nth-child(7n+3) {
+    background: #ff9800;
+}
+
+.tags > a:nth-child(7n+4) {
+    background: #f44336;
+}
+
+.tags > a:nth-child(7n+5) {
+    background: #00abc0;
+}
+
+.tags > a:nth-child(7n+6) {
+    background: #ff4081;
+}
+
+.tags > a:nth-child(7n+7) {
+    background: #2196f3;
+}
+
+.hitokoto {
+    padding: 1em;
+}
+
+.hitokoto-content {
+    word-wrap: break-word;
+    white-space: normal;
+    word-break: break-all;
+    color: #727272;
+}
+.comment-content img{
+    max-height: 100px;
+    max-width: 300px;
+}
+#article-content img{
+    margin: 10px auto;
+    max-height: 300px;
+    vertical-align: middle;
+}
+.comment-content p{
+    display: block;
+    word-break:break-all;
+    word-wrap: break-word;
+}
