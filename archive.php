@@ -2,8 +2,8 @@
 
 <?php $this->need('header.php'); ?>
 
-<div class="mdui-col-lg-12 mdui-col-md-8">
-        <h3><?php $this->archiveTitle(array(
+<div class="mdui-col-md-8">
+        <h3 class="mdui-m-y-3"><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
             'tag'       =>  _t('标签 %s 下的文章'),

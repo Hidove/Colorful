@@ -9,6 +9,7 @@
 * 上传本主题，重命名为 Colorful 并放置在 usr/themes/ 目录下
 * 登录你的 Typecho 后台，选择启用主题即可~
 * 如有问题请于文章内留言  <https://blog.hidove.cn/post/701>
+* 友情链接需安装友情链接插件
 
 ## 主题亮点
 

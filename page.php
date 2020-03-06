@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 
-<div class="mdui-col-lg-12 mdui-col-md-8">
+<div class="mdui-col-md-8">
     <div class="mdui-card mdui-typo">
         <!-- 卡片的标题和副标题 -->
         <div class="mdui-card-primary">

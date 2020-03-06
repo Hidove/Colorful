@@ -2,7 +2,7 @@
 <?php $this->need('header.php'); ?>
 
 <div class="mdui-col-md-8">
-    <div class="mdui-card mdui-hoverable mdui-m-y-3">
+    <div class="mdui-card mdui-hoverable mdui-m-y-3 mdui-p-a-3">
         <!-- 卡片的标题和副标题 -->
         <div class="mdui-card-primary">
             <div class="mdui-card-primary-title"><?php $this->title() ?></div>
