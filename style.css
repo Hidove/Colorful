@@ -5,7 +5,7 @@ a {
 
 blockquote {
     border-left: 4px solid #807fe2 !important;
-    margin-left: 0!important;
+    margin-left: 0 !important;
 }
 
 h1:before,
@@ -49,13 +49,14 @@ table {
     border-collapse: collapse;
 }
 
-table tr {
+
+:not(code)> table tr{
     background-color: #fff;
     border-top: 1px solid #c6cbd1;
 }
 
-table td,
-table th {
+:not(code)> table td,
+:not(code)> table th {
     padding: 6px 13px;
     border: 1px solid #dfe2e5;
     color: #24292e;
