@@ -1,4 +1,6 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) {
+    exit;
+} ?>
 
 </div><!-- end .row -->
 </div>
@@ -19,7 +21,13 @@
 </footer><!-- end #footer -->
 <?php $this->footer(); ?>
 <a href="#top" target="_self" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">&#xe5d8;</i></a>
-<script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+
+<!-- cdn -->
+<script src="https://lib.baomitu.com/mdui/0.4.3/js/mdui.min.js"></script>
+
+<!-- 本地 -->
+<!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/mdui-v0.4.3/js/mdui.min.js'); ?>"> -->
+
 <script>
     $.ajax({
         url:'https://v1.hitokoto.cn/?encode=text',

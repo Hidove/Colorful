@@ -50,9 +50,17 @@
 
 <?php $this->need('sidebar.php'); ?>
 
-<script src="<?php $this->options->themeUrl('assets/fancybox/jquery.fancybox.min.js'); ?>"></script>
+<!-- CDN -->
+<script src="https://lib.baomitu.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://lib.baomitu.com/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+<!-- 本地 -->
+<!-- <script src="<?php $this->options->themeUrl('assets/fancybox/jquery.fancybox.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assets/highlight/highlight.pack.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('assets/highlight/highlightjs-line-numbers.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('assets/highlight/highlightjs-line-numbers.min.js'); ?>"></script> -->
+
 <script>
     hljs.initHighlightingOnLoad();
     hljs.initLineNumbersOnLoad();

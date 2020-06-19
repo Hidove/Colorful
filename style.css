@@ -4,68 +4,68 @@ a {
 }
 
 blockquote {
-    border-left: 4px solid #ed515191 !important;
+    border-left: 4px solid #807fe2 !important;
+    margin-left: 0!important;
 }
 
-h1 {
-    padding: 0px 20px;
-    border-left: 10px solid #ed515191;
-    background-color: rgba(208, 208, 208, 0);
-    font-size: 19px;
-    line-height: 30px;
-    color: cornflowerblue;
-    font-weight: bold;
-    margin: 5px 0;
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 2rem;
+    height: 0.15rem;
+    background: linear-gradient(#807fe2 30%, #5755d9 70%);
+    box-shadow: 0 3px 3px rgba(128, 127, 226, 0.4);
+    border-radius: 4px;
+    transition: 0.25s;
+    z-index: 1;
 }
 
-h2 {
-    padding: 0px 20px;
-    border-left: 10px solid #BF51ED91;
-    background-color: rgba(208, 208, 208, 0);
-    font-size: 18px;
-    line-height: 30px;
-    color: cornflowerblue;
-    font-weight: bold;
-    margin: 5px 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 0.7rem;
+    color: #3b4351;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
 }
 
-h3 {
-    padding: 0px 20px;
-    border-left: 10px solid #6495ed91;
-    background-color: rgba(208, 208, 208, 0);
-    font-size: 17px;
-    line-height: 27px;
-    color: cornflowerblue;
-    font-weight: bold;
-    margin: 5px 0;
+table {
+    width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
-h4 {
-    padding: 0px 20px;
-    border-left: 10px solid #e2aa2b91;
-    background-color: rgba(208, 208, 208, 0);
-    font-size: 16px;
-    line-height: 24px;
-    color: cornflowerblue;
-    font-weight: bold;
-    margin: 5px 0;
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
 }
-h5 {
-    padding: 0 20px;
-    border-left: 10px solid #64c1c191;
-    background-color: rgba(208, 208, 208, 0);
-    font-size: 15px;
-    line-height: 21px;
-    color: cornflowerblue;
-    font-weight: bold;
-    margin: 5px 0;
+
+table td,
+table th {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+    color: #24292e;
 }
 
 /* for block of numbers */
 .hljs-ln-numbers {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    .hljs-ln td -khtml-user-select: none;
+    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -74,10 +74,11 @@ h5 {
     color: #ccc;
     border-right: 1px solid #CCC;
     vertical-align: top;
-    padding-right: 10px!important;
+    padding-right: 10px !important;
 
     /* your custom style here */
 }
+
 /* for block of code */
 .hljs-ln-code {
     padding-left: 10px !important;
@@ -163,7 +164,7 @@ h5 {
     display: inline-block;
 }
 
-.tags > a {
+.tags>a {
     display: inline-block;
     margin: 0 8px 8px 0;
     padding: 6px 10px;
@@ -172,31 +173,31 @@ h5 {
     text-decoration: none;
 }
 
-.tags > a:nth-child(7n+1) {
+.tags>a:nth-child(7n+1) {
     background: #8bc34a;
 }
 
-.tags > a:nth-child(7n+2) {
+.tags>a:nth-child(7n+2) {
     background: #673ab7;
 }
 
-.tags > a:nth-child(7n+3) {
+.tags>a:nth-child(7n+3) {
     background: #ff9800;
 }
 
-.tags > a:nth-child(7n+4) {
+.tags>a:nth-child(7n+4) {
     background: #f44336;
 }
 
-.tags > a:nth-child(7n+5) {
+.tags>a:nth-child(7n+5) {
     background: #00abc0;
 }
 
-.tags > a:nth-child(7n+6) {
+.tags>a:nth-child(7n+6) {
     background: #ff4081;
 }
 
-.tags > a:nth-child(7n+7) {
+.tags>a:nth-child(7n+7) {
     background: #2196f3;
 }
 
@@ -210,19 +211,23 @@ h5 {
     word-break: break-all;
     color: #727272;
 }
-.comment-content img{
+
+.comment-content img {
     max-height: 100px;
     max-width: 300px;
 }
-#article-content img{
+
+#article-content img {
     margin: 10px auto;
     vertical-align: middle;
 }
-.comment-content p{
+
+.comment-content p {
     display: block;
-    word-break:break-all;
+    word-break: break-all;
     word-wrap: break-word;
 }
-#comments li{
+
+#comments li {
     list-style: none;
 }

@@ -1,4 +1,6 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) {
+    exit;
+} ?>
 <!DOCTYPE HTML>
 <html class="no-js" lang="zh">
 <head>
@@ -10,12 +12,20 @@
             'category' => _t('分类 %s 下的文章'),
             'search' => _t('包含关键字 %s 的文章'),
             'tag' => _t('标签 %s 下的文章'),
-            'author' => _t('%s 发布的文章')
+            'author' => _t('%s 发布的文章'),
         ), '', ' - '); ?><?php $this->options->title(); ?><?php if ($this->is('index')): ?> - 分享互联网的宝藏<?php endif; ?></title>
 
     <link rel="icon" type="image/ico" href="<?php $this->options->themeUrl('favicon.ico'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/mdui-v0.4.3/css/mdui.min.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/highlight/styles/github-gist.css'); ?>">
+    
+    
+    <!-- cdn -->
+    <link href="https://lib.baomitu.com/mdui/0.4.3/css/mdui.min.css" rel="stylesheet">
+    <link href="https://lib.baomitu.com/highlight.js/9.15.10/styles/github-gist.min.css" rel="stylesheet">
+
+    <!-- 本地 -->
+    <!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/mdui-v0.4.3/css/mdui.min.css'); ?>"> -->
+
+    <!-- <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/highlight/styles/github-gist.css'); ?>"> -->
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/fancybox/jquery.fancybox.min.css'); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -41,7 +51,7 @@
     <div class="mdui-toolbar mdui-color-indigo">
         <a href="javascript:;" class="mdui-btn mdui-btn-icon " mdui-drawer="{target: '#left-drawer'}"><i
                 class="mdui-icon material-icons">&#xe5d2;</i></a>
-        <a href="/" class="mdui-typo-headline"><?php $this->options->title() ?></a>
+        <a href="/" class="mdui-typo-headline"><?php $this->options->title(); ?></a>
         <div class="mdui-toolbar-spacer"></div>
         <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '搜索'}"
            mdui-dialog="{target: '#search'}"><i class="mdui-icon material-icons">&#xe8b6;</i></a>
@@ -67,7 +77,7 @@
     <div class="my-info mdui-text-center">
         <img class="mdui-img-circle mdui-img-fluid avatar"
              src="https://ae01.alicdn.com/kf/U70631aeb863445a588d2d5258ed173e0F.jpg"/>
-        <span><?php $this->options->title() ?><i class="mdui-icon material-icons">&#xe5cf;</i></span>
+        <span><?php $this->options->title(); ?><i class="mdui-icon material-icons">&#xe5cf;</i></span>
     </div>
     <div class="mdui-list" mdui-collapse="{accordion: true}">
         <!-- 组合导航 -->
@@ -109,9 +119,9 @@
             </div>
             <div class="mdui-collapse-item-body mdui-list">
                 <?php
-                if (class_exists('Links_Plugin')){
+                if (class_exists('Links_Plugin')) {
                     $mypattern = '<a href="{url}" target="_blank" rel="nofollow" class="mdui-list-item mdui-ripple ">{name}</a>';
-                    Links_Plugin::output($mypattern, 0, "ten");
+                    Links_Plugin::output($mypattern, 0, 'ten');
                 }
             ?>
             </div>

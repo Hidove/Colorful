@@ -1,7 +1,10 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) {
+    exit;
+} ?>
 <!--pingl-->
 <?php
-function threadedComments($comments, $options) {
+function threadedComments($comments, $options)
+{
     $commentClass = '';
     if ($comments->authorId) {
         if ($comments->authorId == $comments->ownerId) {
@@ -12,38 +15,33 @@ function threadedComments($comments, $options) {
     }
 
     $commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent';
-    $depth = $comments->levels +1;
+    $depth = $comments->levels + 1;
 
     if ($comments->url) {
-        $author = '<a href="' . $comments->url . '"target="_blank"' . ' rel="external nofollow">' . $comments->author . '</a>';
+        $author = '<a href="'.$comments->url.'"target="_blank"'.' rel="external nofollow">'.$comments->author.'</a>';
     } else {
         $author = $comments->author;
-    }
-?>
+    } ?>
 
 <li id="li-<?php $comments->theId(); ?>" class="comment-body<?php
 if ($depth > 1 && $depth < 3) {
-    echo ' comment-child ';
-    $comments->levelsAlt('comment-level-odd', ' comment-level-even');
-}
-else if( $depth > 2){
-    echo ' comment-child2';
-    $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
-}
-else {
-    echo ' comment-parent';
-}
-$comments->alt(' comment-odd', ' comment-even');
-?>">
+        echo ' comment-child ';
+        $comments->levelsAlt('comment-level-odd', ' comment-level-even');
+    } elseif ($depth > 2) {
+        echo ' comment-child2';
+        $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
+    } else {
+        echo ' comment-parent';
+    }
+    $comments->alt(' comment-odd', ' comment-even'); ?>">
     <div id="<?php $comments->theId(); ?>">
         <?php
         $size = '80';
-        $avatar = getAvatar($comments->mail,$size);
-        ?>
+    $avatar = getAvatar($comments->mail, $size); ?>
         <div class="mdui-card mdui-typo mdui-m-t-2">
             <!-- 卡片头部，包含头像、标题、副标题 -->
             <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="<?php echo $avatar ?>" width="<?php echo $size ?>" height="<?php echo $size ?>" />
+                <img class="mdui-card-header-avatar" src="<?php echo $avatar; ?>" width="<?php echo $size; ?>" height="<?php echo $size; ?>" />
                 <div class="mdui-card-header-title">
                     <span class="comment-author<?php echo $commentClass; ?>"><?php echo $author; ?></span>
                 </div>
@@ -55,9 +53,11 @@ $comments->alt(' comment-odd', ' comment-even');
             <div class="mdui-card-content comment-content">
                 <span class="comment-author-at"><?php getCommentAt($comments->coid); ?></span>&nbsp;&nbsp;
                 <?php echo getComments($comments->content); ?>
-                <?php if ('waiting' == $comments->status) { ?>
+                <?php if ('waiting' == $comments->status) {
+        ?>
                     <em class="mdui-text-color-grey">（<?php $options->commentStatus(); ?>）</em>
-                <?php } ?>
+                <?php
+    } ?>
             </div>
             <!-- 卡片的按钮 -->
             <div class="mdui-card-actions">
@@ -65,31 +65,34 @@ $comments->alt(' comment-odd', ' comment-even');
             </div>
         </div>
     </div>
-    <?php if ($comments->children) { ?>
+    <?php if ($comments->children) {
+        ?>
         <div class="comment-children mdui-m-l-5">
             <?php $comments->threadedComments($options); ?>
         </div>
-    <?php } ?>
+    <?php
+    } ?>
 </li>
-<?php } ?>
+<?php
+} ?>
 <!--pingl-->
 <?php $this->comments()->to($comments); ?>
 <div id="comments" class="mdui-card mdui-m-t-3 mdui-hoverable">
     <div class="mdui-card-content mdui-typo">
-    <?php if($this->allow('comment')): ?>
+    <?php if ($this->allow('comment')): ?>
         <div id="<?php $this->respondId(); ?>" class="respond">
             <div class="cancel-comment-reply">
                 <?php $comments->cancelReply(); ?>
             </div>
 
             <h3 id="response"><?php _e('添加新评论'); ?></h3>
-            <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
+            <form method="post" action="<?php $this->commentUrl(); ?>" id="comment-form" role="form">
                 <div class="mdui-textfield mdui-textfield-floating-label">
                     <i class="mdui-icon material-icons">&#xe0d8;</i>
                     <label for="textarea" class="mdui-textfield-label"><?php _e('Message'); ?></label>
                     <textarea name="text" id="textarea" class="mdui-textfield-input" required ><?php $this->remember('text'); ?></textarea>
                 </div>
-                <?php if($this->user->hasLogin()): ?>
+                <?php if ($this->user->hasLogin()): ?>
                     <p><span class="mdui-typo-caption-opacity"><?php _e('登录身份: '); ?></span><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
                 <?php else: ?>
                 <div class="mdui-row-xs-1 mdui-row-sm-<?php if ($this->options->commentsRequireURL): ?>3<?php else: ?>2<?php endif; ?>">
@@ -125,5 +128,5 @@ $comments->alt(' comment-odd', ' comment-even');
     <?php $comments->listComments(); ?>
     <?php endif; ?>
     </div>
-    <?php $comments->pageNav('前一页', '后一页', 1, '...', array('wrapTag' => 'div', 'wrapClass' => 'page-navigator mdui-card mdui-hoverable mdui-p-y-3', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'current', 'prevClass' => 'prev', 'nextClass' => 'next',)); ?>
+    <?php $comments->pageNav('前一页', '后一页', 1, '...', array('wrapTag' => 'div', 'wrapClass' => 'page-navigator mdui-card mdui-hoverable mdui-p-y-3', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'current', 'prevClass' => 'prev', 'nextClass' => 'next')); ?>
 </div>

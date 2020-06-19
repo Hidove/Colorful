@@ -1,6 +1,6 @@
 ## Colorful
 
-> A colorful Typecho theme
+> A colorful Typecho theme.
 
 ## 使用方法
 
@@ -13,7 +13,9 @@
 
 ## 主题亮点
 
-简洁大气、图片灯箱、代码高亮。
+* 简洁大气
+* 图片灯箱
+* 代码高亮
 
 ## 演示
 
@@ -22,13 +24,13 @@
 [![https://pic.abcyun.co/image/5e607faa7f003.jpg](https://pic.abcyun.co/image/5e607faa7f003.jpg)](https://pic.abcyun.co/image/5e607faa7f003.jpg)
 
 
-[![https://pic.abcyun.co/image/5e607fe087d94.jpg](https://pic.abcyun.co/image/5e607fe087d94.jpg)](https://pic.abcyun.co/image/5e607fe087d94.jpg)
+[![https://pic.abcyun.co/image/5eecbac3ba3b5.jpg](https://pic.abcyun.co/image/5eecbac3ba3b5.jpg)](https://pic.abcyun.co/image/5eecbac3ba3b5.jpg)
 
 ## 开源协议
 
 本项目采用 MIT 开源协议进行授权
 
-原创不易！如果喜欢本项目，请 Star 它以示对我的支持~
+原创不易！如果喜欢本项目，请`Star`它以示对我的支持~
 
 同时欢迎前往 我的博客 为我提供赞助，谢谢您！
 
